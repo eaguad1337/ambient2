@@ -1,15 +1,22 @@
+<style scoped>
+.isActive {
+    background-color: #4299e1;
+    color: #fff;
+}
+</style>
+
 <template>
     <div class="grid grid-cols-1 md:grid-cols-6 gap-5">
-        <div class="border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('Camping')"> Camping </div>
-        <div class="border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('Calm in a car')"> Calm in a car </div>
-        <div class="border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('Driving at night in the rain')"> Driving at night in the rain </div>
-        <div class="border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('Thunder Train')"> Thunder Train</div>
-        <div class="border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('Summer Day')"> Summer Day </div>
-        <div class="border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('Sleeping by the beach')"> Sleeping by the beach </div>
-        <div class="border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('Cafe')"> Cafe </div>
-        <div class="border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('City')"> City </div>
-        <div class="border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('Rainy Traffic')"> Rainy Traffic </div>
-        <div class="border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="mute()">
+        <div :class="{ isActive: playlistIsActive('Camping') }" class="px-8 flex items-center justify-center cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-gray-300" @click="play('Camping')"> Camping </div>
+        <div :class="{ isActive: playlistIsActive('Calm in a car') }" class="px-8 flex items-center justify-center cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-gray-300" @click="play('Calm in a car')"> Calm in a car </div>
+        <div :class="{ isActive: playlistIsActive('Driving at night in the rain') }" class="px-8 flex items-center justify-center cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-gray-300" @click="play('Driving at night in the rain')"> Driving at night in the rain </div>
+        <div :class="{ isActive: playlistIsActive('Thunder Train') }" class="px-8 flex items-center justify-center cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-gray-300" @click="play('Thunder Train')"> Thunder Train</div>
+        <div :class="{ isActive: playlistIsActive('Summer Day') }" class="px-8 flex items-center justify-center cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-gray-300" @click="play('Summer Day')"> Summer Day </div>
+        <div :class="{ isActive: playlistIsActive('Sleeping by the beach') }" class="px-8 flex items-center justify-center cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-gray-300" @click="play('Sleeping by the beach')"> Sleeping by the beach </div>
+        <div :class="{ isActive: playlistIsActive('Cafe') }" class="px-8 flex items-center justify-center cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-gray-300" @click="play('Cafe')"> Cafe </div>
+        <div :class="{ isActive: playlistIsActive('City') }" class="px-8 flex items-center justify-center cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-gray-300" @click="play('City')"> City </div>
+        <div :class="{ isActive: playlistIsActive('Rainy Traffic') }" class="px-8 flex items-center justify-center cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-gray-300" @click="play('Rainy Traffic')"> Rainy Traffic </div>
+        <div class="px-8 flex items-center justify-center cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-gray-300" @click="mute()">
             <img src="/images/mute.svg" style="width: 35px"/>
         </div>
     </div>
@@ -20,6 +27,7 @@ import { EventBus } from '../app.js';
 export default {
     data() {
         return {
+            'selectedPlaylist': null,
             'playlists': {
                 'Camping': [
                     {"label": "fire", "volume": 20},
@@ -92,8 +100,12 @@ export default {
         }
     },
     methods: {
+        playlistIsActive(playlist) {
+            return this.selectedPlaylist == playlist
+        },
         play(playlist){
             this.mute()
+            this.selectedPlaylist = playlist
 
             let sound;
             for (sound of this.playlists[playlist]) {
@@ -101,7 +113,8 @@ export default {
                 EventBus.$emit(`play-${sound.label}-volume`, sound.volume)
             }
         },
-        mute(playlist){
+        mute(playlist) {
+            this.selectedPlaylist = null
             EventBus.$emit("adjust-volume", 0)
         }
     }
