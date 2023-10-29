@@ -2203,72 +2203,72 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "flex justify-between flex-wrap"
+    staticClass: "grid grid-cols-1 md:grid-cols-6 gap-5"
   }, [_c("div", {
-    staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
+    staticClass: "border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
     on: {
       click: function click($event) {
         return _vm.play("Camping");
       }
     }
   }, [_vm._v(" Camping ")]), _vm._v(" "), _c("div", {
-    staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
+    staticClass: "border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
     on: {
       click: function click($event) {
         return _vm.play("Calm in a car");
       }
     }
   }, [_vm._v(" Calm in a car ")]), _vm._v(" "), _c("div", {
-    staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
+    staticClass: "border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
     on: {
       click: function click($event) {
         return _vm.play("Driving at night in the rain");
       }
     }
   }, [_vm._v(" Driving at night in the rain ")]), _vm._v(" "), _c("div", {
-    staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
+    staticClass: "border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
     on: {
       click: function click($event) {
         return _vm.play("Thunder Train");
       }
     }
   }, [_vm._v(" Thunder Train")]), _vm._v(" "), _c("div", {
-    staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
+    staticClass: "border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
     on: {
       click: function click($event) {
         return _vm.play("Summer Day");
       }
     }
   }, [_vm._v(" Summer Day ")]), _vm._v(" "), _c("div", {
-    staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
+    staticClass: "border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
     on: {
       click: function click($event) {
         return _vm.play("Sleeping by the beach");
       }
     }
   }, [_vm._v(" Sleeping by the beach ")]), _vm._v(" "), _c("div", {
-    staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
+    staticClass: "border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
     on: {
       click: function click($event) {
         return _vm.play("Cafe");
       }
     }
   }, [_vm._v(" Cafe ")]), _vm._v(" "), _c("div", {
-    staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
+    staticClass: "border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
     on: {
       click: function click($event) {
         return _vm.play("City");
       }
     }
   }, [_vm._v(" City ")]), _vm._v(" "), _c("div", {
-    staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
+    staticClass: "border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
     on: {
       click: function click($event) {
         return _vm.play("Rainy Traffic");
       }
     }
   }, [_vm._v(" Rainy Traffic ")]), _vm._v(" "), _c("div", {
-    staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
+    staticClass: "border-2 px-8 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
     on: {
       click: function click($event) {
         return _vm.mute();
@@ -2304,7 +2304,7 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "container m-8"
+    staticClass: "container"
   }, [_c("div", {
     staticClass: "text-center"
   }, [_c("div", [_c("button", {
@@ -32284,9 +32284,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/personal/programming/masonite/ambient2/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/personal/programming/masonite/ambient2/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /Users/personal/programming/masonite/ambient2/resources/css/main.css */"./resources/css/main.css");
+__webpack_require__(/*! /Users/eaguad/Code/ambient2/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/eaguad/Code/ambient2/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/eaguad/Code/ambient2/resources/css/main.css */"./resources/css/main.css");
 
 
 /***/ })

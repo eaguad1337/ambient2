@@ -1,8 +1,8 @@
 <template>
-    <div class="container m-8">
+    <div class="container">
         <div class="text-center">
             <div>
-                <button @click="toggleSound()"> 
+                <button @click="toggleSound()">
                     <img v-if="sound.play" :src="this.$attrs.icon + '.svg'" width="50px">
                     <img v-else :src="this.$attrs.icon + '-noplay.svg'" width="50px">
                 </button>
@@ -18,7 +18,7 @@
 import { EventBus } from '../app.js';
     export default {
         mounted(){
-            this.sound.audio = new Audio(this.$attrs.file); 
+            this.sound.audio = new Audio(this.$attrs.file);
             let vueObj = this
             EventBus.$on(`play-${this.$attrs.label}-volume`, function(volume){
                 console.log("should now play sound", vueObj.sound, volume)
@@ -83,11 +83,11 @@ import { EventBus } from '../app.js';
             pauseSound () {
                 this.sound.play = false
                 this.sound.volume = 0
-                this.sound.audio.pause();  
+                this.sound.audio.pause();
             },
             pause () {
                 this.sound.play = false
-                this.sound.audio.pause();  
+                this.sound.audio.pause();
             }
         }
     }
