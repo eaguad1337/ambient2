@@ -1936,6 +1936,25 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           "label": "frog",
           "volume": 15
         }],
+        'Thunder Train': [{
+          "label": "car-rain",
+          "volume": 100
+        }, {
+          "label": "rain",
+          "volume": 60
+        }, {
+          "label": "thunder",
+          "volume": 100
+        }, {
+          "label": "train",
+          "volume": 100
+        }, {
+          "label": "heartbeat",
+          "volume": 100
+        }, {
+          "label": "cafe",
+          "volume": 60
+        }],
         'Calm in a car': [{
           "label": "rain",
           "volume": 30
@@ -1956,11 +1975,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           "label": "car-rain",
           "volume": 100
         }, {
-          "label": "car",
-          "volume": 30
+          "label": "train",
+          "volume": 100
         }, {
           "label": "thunder",
-          "volume": 60
+          "volume": 1
         }, {
           "label": "night",
           "volume": 30
@@ -2207,6 +2226,13 @@ var render = function render() {
       }
     }
   }, [_vm._v(" Driving at night in the rain ")]), _vm._v(" "), _c("div", {
+    staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
+    on: {
+      click: function click($event) {
+        return _vm.play("Thunder Train");
+      }
+    }
+  }, [_vm._v(" Thunder Train")]), _vm._v(" "), _c("div", {
     staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
     on: {
       click: function click($event) {
