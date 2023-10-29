@@ -7,6 +7,7 @@
         <div class="px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('Sleeping by the beach')"> Sleeping by the beach </div>
         <div class="px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('Cafe')"> Cafe </div>
         <div class="px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('City')"> City </div>
+        <div class="px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="play('Rainy Traffic')"> Rainy Traffic </div>
         <div class="px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300" @click="mute()"> 
         <img src="/images/mute.svg" style="width: 35px"/>
         </div>
@@ -39,6 +40,12 @@ export default {
                     {"label": "car", "volume": 30},
                     {"label": "thunder", "volume": 60},
                     {"label": "night", "volume": 30},
+                ],
+                'Rainy Traffic': [
+                    {"label": "car-rain", "volume": 100},
+                    {"label": "car", "volume": 60},
+                    {"label": "thunder", "volume": 100},
+                    {"label": "city", "volume": 25},
                 ],
                 'Summer Day': [
                     {"label": "air-conditioner", "volume": 100},

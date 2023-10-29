@@ -1965,6 +1965,19 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           "label": "night",
           "volume": 30
         }],
+        'Rainy Traffic': [{
+          "label": "car-rain",
+          "volume": 100
+        }, {
+          "label": "car",
+          "volume": 60
+        }, {
+          "label": "thunder",
+          "volume": 100
+        }, {
+          "label": "city",
+          "volume": 25
+        }],
         'Summer Day': [{
           "label": "air-conditioner",
           "volume": 100
@@ -2222,6 +2235,13 @@ var render = function render() {
       }
     }
   }, [_vm._v(" City ")]), _vm._v(" "), _c("div", {
+    staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
+    on: {
+      click: function click($event) {
+        return _vm.play("Rainy Traffic");
+      }
+    }
+  }, [_vm._v(" Rainy Traffic ")]), _vm._v(" "), _c("div", {
     staticClass: "px-8 m-2 w-1/4 border-2 cursor-pointer hover:bg-blue-200 py-6 text-center shadow-xl border-rounded bg-gray-100 border-2 border-gray-300",
     on: {
       click: function click($event) {
