@@ -4,6 +4,14 @@ This project is an ambient sound mixer. This mixer contains rain, thunder and ca
 
 create your own landscape effects to help you focus.
 
+## Installation
+
+```
+$ npm install
+$ npm run dev
+$ python craft serve
+```
+
 ## Adding your own sounds
 
 Adding your own sounds are simple.
@@ -14,7 +22,7 @@ Adding your own sounds are simple.
 
 3. We need a logo. all logos must be svg files. the toggle icons should be an svg with the naming schema of `imageName.svg` and when the sound s off it is `imageName-noplay.svg` for "not playing".
 
-4. finally add the sound to the page using the vue `SoundComponent`.
+4. finally add the sound to the `welcome.html` page using the vue `SoundComponent`.
 
 ```html
 <sound-component file="public/train.mp3" icon="/images/train" label="train"></sound-component>
