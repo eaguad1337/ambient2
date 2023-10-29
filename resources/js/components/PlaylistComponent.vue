@@ -28,6 +28,14 @@ export default {
                     {"label": "cicada", "volume": 5},
                     {"label": "frog", "volume": 15},
                 ],
+                'Thunder Train': [
+                    {"label": "car-rain", "volume": 100},
+                    {"label": "rain", "volume": 60},
+                    {"label": "thunder", "volume": 100},
+                    {"label": "train", "volume": 100},
+                    {"label": "heartbeat", "volume": 100},
+                    {"label": "cafe", "volume": 60},
+                ],
                 'Calm in a car': [
                     {"label": "rain", "volume": 30},
                     {"label": "car-rain", "volume": 100},
@@ -37,8 +45,8 @@ export default {
                 ],
                 'Driving at night in the rain': [
                     {"label": "car-rain", "volume": 100},
-                    {"label": "car", "volume": 30},
-                    {"label": "thunder", "volume": 60},
+                    {"label": "train", "volume": 100},
+                    {"label": "thunder", "volume": 1},
                     {"label": "night", "volume": 30},
                 ],
                 'Rainy Traffic': [
